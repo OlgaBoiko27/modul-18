@@ -1,436 +1,79 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap" rel="stylesheet">    
+    <title>Document</title>
 
     <link rel="stylesheet" href="./styles/style_desctop.css">
     <link rel="stylesheet" href="./styles/style_media.css">
 
-    <title>Landing</title>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body>
-    <nav class="avt-header">
-        <div class="avt-container__topnav   avt-container__header">
-            
-            <a href="" class="avt-header__logo">IC "Repair Design Project"</a>
-            
-            <ul class="avt-header-navigation">
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#HOME">HOME</a></li>
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#PROJECTS">PROJECTS</a></li>
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#MEASUREMENT">MEASUREMENT</a></li>
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#TEAM">TEAM</a></li>
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#REVIEWS">REVIEWS</a></li>
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#CONTACTS">CONTACTS</a></li>
-            </ul>
-            
-            <a href="tel:+79287683239" class="avt-header__tel">+7 (928) 768-32-39</a>
-            
-            <button  class="avt-button avt-button__beige avt-header__button">Request a call</button>
-        </div>
-    </nav>
 
-    <main>
-        <section class="avt-first">
-            <div class="avt-first__vual"></div>
-            <div class="avt-container__main   avt-container__zindex1">
-                <h1 class="avt-title avt-title__h1 avt-first__h1">Turnkey Repair in the<br>city of <span class="avt-text__beige_serif">Rostov-on-Don</span></h1>
-                
-                <p class="avt-title avt-title__h6">
-                    Get ready-made turnkey repairs on time<br>with work time saving up to 45 days and 20% from<br>cost of materials due to the organization of work
+    <section id="PROJECTS" class="avt-projects">
+        <div class="avt-container__main avt-projects-rownav">
+            <div class="avt-projects-colleft"></div>
+            <div class="avt-projects-navtop avt-projects-colright" id="avtid-nav-container">
+            </div>
+        </div>
+        <div class="avt-container__main avt-projects-rowdetail">
+            <div class="avt-projects-detail-datas avt-projects-colleft">
+                <h2 class="avt-title avt-title__h2 avt-projects-detail-datas__h2">Completed<br>projects</h2>
+
+                <p class="avt-projects-detail-datas__p">
+                    Only a small part of the work performed by our company is
+                    presented on the site.
+                    <span class="avt-visible-mobile_big_line"><br></span>
+                    For 14 years on in the construction
+                    market we have made happy more than 1000 families
                 </p>
 
-                <div class="avt-container__2button">
-                    <button  class="avt-button avt-button__beige avt-first__button">CALCULATE THE COST</button>
-                    <button  class="avt-button avt-button__transparent avt-first__button">SUBMIT YOUR APPLICATION</button>
+                <div class="avt-project-slider avt-visible-mobile_line">
+                    <img id="avtid-project-foto_sm" src="./images/intro_sm.png" alt="Projects">
+                    <div class="avt-project-slider-before"></div>
+                    <div class="avt-project-slider-after"></div>
                 </div>
-            </div>
-        </section>
 
-        <section id="PROJECTS" class="avt-projects">
-            <div class="avt-container__main avt-projects-rownav">
-                <div class="avt-projects-colleft"></div>
-                <div class="avt-projects-navtop avt-projects-colright">
-                    <div class="avt-projects-navtop-item avt-projects-navtop-item--1 avt-title">
-                        <span class="avt-projects-navtop-item__text avt-projects-navtop-item__text--active">Rostov-on-Don, Admiral</span>
-                    </div>
-                    <div class="avt-projects-navtop-item avt-projects-navtop-item--2 avt-title">
-                        <span class="avt-projects-navtop-item__text"> Sochi, Thieves</span>
-                    </div>
-                    <div class="avt-projects-navtop-item avt-projects-navtop-item--3 avt-title">
-                        <span class="avt-projects-navtop-item__text">Rostov-on-Don, Patriotic</span></li>
-                    </div>
-                </div>
-            </div>
-            <div class="avt-container__main avt-projects-rowdetail">
-                <div class="avt-projects-detail-datas avt-projects-colleft">
-                    <h2 class="avt-title avt-title__h2 avt-projects-detail-datas__h2">Completed<br>projects</h2>
+                <div class="avt-projects-detail-data-blocks">
 
-                    <p class="avt-projects-detail-datas__p">
-                        Only a small part of the work performed by our company is
-                        presented on the site.
-                        <span class="avt-visible-mobile_big_line"><br></span>
-                        For 14 years on in the construction
-                        market we have made happy more than 1000 families
-                    </p>
+                    <div class="avt-projects-detail-datas-items">
+                        <h4 class="avt-title avt-title__h4 avt-projects-detail-datas-items__h4">City:</h4>
+                        <p class="avt-projects-detail-datas-items__p">
+                            <span id="avtid-project-city">-</span><br>
+                            <span id="avtid-project-location_prefix">-</span> <span id="avtid-project-location_name">-</span></p>
+                    </div>
+                    <div class="avt-projects-detail-datas-items">
+                        <h4 class="avt-title avt-title__h4 avt-projects-detail-datas-items__h4">Apartment area:</h4>
+                        <p class="avt-projects-detail-datas-items__p" id="avtid-project-area">-</p>
+                    </div>
+                    <div class="avt-projects-detail-datas-items--break">
+                    </div>
+                    <div class="avt-projects-detail-datas-items">
+                        <h4 class="avt-title avt-title__h4 avt-projects-detail-datas-items__h4">Repair time:</h4>
+                        <p class="avt-projects-detail-datas-items__p" id="avtid-project-time">-</p>
+                    </div>
+                    <div class="avt-projects-detail-datas-items">
+                        <h4 class="avt-title avt-title__h4 avt-projects-detail-datas-items__h4">Repair Cost:</h4>
+                        <p class="avt-projects-detail-datas-items__p" id="avtid-project-cost">-</p>
+                    </div>
+                </div>
 
-                    <div class="avt-project-slider avt-visible-mobile_line">
-                        <img src="./images/projects_photo_2.jpg" alt="Projects">
+                <div class="avt-projects-detail-bottomnav">
+                    <div class="avt-projects-detail-bottomnav-before"></div>   
+                    <div class="avt-projects-detail-bottomnav-block"  id="avtid-dot-container">
                     </div>
-    
-                    <div class="avt-projects-detail-data-blocks">
-
-                        <div class="avt-projects-detail-datas-items">
-                            <h4 class="avt-title avt-title__h4 avt-projects-detail-datas-items__h4">City:</h4>
-                            <p class="avt-projects-detail-datas-items__p">Rostov-on-Don <br>LCD admiral</p>
-                        </div>
-                        <div class="avt-projects-detail-datas-items">
-                            <h4 class="avt-title avt-title__h4 avt-projects-detail-datas-items__h4">Apartment area:</h4>
-                            <p class="avt-projects-detail-datas-items__p">81 m2</p>
-                        </div>
-                        <div class="avt-projects-detail-datas-items--break">
-                        </div>
-                        <div class="avt-projects-detail-datas-items">
-                            <h4 class="avt-title avt-title__h4 avt-projects-detail-datas-items__h4">Repair time:</h4>
-                            <p class="avt-projects-detail-datas-items__p">3.5 months</p>
-                        </div>
-                        <div class="avt-projects-detail-datas-items">
-                            <h4 class="avt-title avt-title__h4 avt-projects-detail-datas-items__h4">Repair Cost:</h4>
-                            <p class="avt-projects-detail-datas-items__p">Upon request</p>
-                        </div>
-                    </div>
-
-                    <div class="avt-projects-detail-bottomnav">
-                        <div class="avt-projects-detail-bottomnav-block">
-                            <div class="avt-projects-detail-bottomnav-block-item avt-projects-detail-bottomnav-block-item--active"></div>
-                            <div class="avt-projects-detail-bottomnav-block-item"></div>
-                            <div class="avt-projects-detail-bottomnav-block-item"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="avt-projects-detail-photo avt-projects-colright">
-                    <img src="./images/projects_photo_1.png" alt="Завершенные проекты. Ростов-на-Дону, Адмирал. 81 м2">
+                    <div class="avt-projects-detail-bottomnav-after"></div>
                 </div>
             </div>
-        </section>
-
-        <section id="CONTROL" class="avt-control">
-            <div class="avt-container__main">
-
-                <h3 class="avt-title avt-title__h3 avt-control__h3">online control</h3>
-                <div class="avt-control-iconblock">
-                    <div class="avt-control-iconblock__icon"><img src="./images/camera.svg"></div>
-                </div>
-                <div class="avt-control-cameraview"><img src="./images/control_perview.jpg" alt="Camera"></div>
-                <div class="avt-control__line"></div>
-                <p class="avt-control__p">
-                    At each facility, a camera is installed that broadcasts the progress of work on the clock. 
-                    At any time, you can go to our website and monitor the progress of work in your apartment. 
-                    You can watch the live broadcast from one of our facilities! Leave a request below and you 
-                    will receive a link to the broadcast.
-                </p>
-                <div class="avt-control-form">
-                    <div class="avt-control-form-line1">
-                        <div class="avt-control-form-line1-inputblock">
-                            <p class="avt-control-form-line1-inputblock__caption">Name</p>
-                            <input class="avt-control-form-line1-inputblock__input" type="text" value="" placeholder="What is your name:">
-                        </div>
-                        <div class="avt-control-form-line1-inputblock">
-                            <p class="avt-control-form-line1-inputblock__caption">Phone</p>
-                            <input class="avt-control-form-line1-inputblock__input" type="tel" value="" placeholder="Your phone number:">
-                        </div>
-                        <button  class="avt-button avt-button__beige_white avt-control-form-line1-inputblock__button">Submit</button>
-                    </div>
-                    <div class="avt-control-form-line2">
-                        <input id="avt-control-form-line2__check" class="avt-control-form-line2__check" type="checkbox" value="yes" checked=true>
-                        <label for="avt-control-form-line2__check" class="avt-control-form-line2__label">I agree to the processing of personal data</label>
-                    </div>
-                </div>
+            <div class="avt-projects-detail-photo avt-projects-colright">
+                <img id="avtid-project-foto_big" src="./images/intro.png" alt="Завершенные проекты">
             </div>
-        </section>
-
-        <section id="REPAIR" class="avt-container__repair avt-repair">
-            <h3 class="avt-title avt-title__h3 avt-repair__h3">TYPES OF REPAIR</h3>
-            <div class="avt-repair-iconblock">
-                <div class="avt-repair-iconblock__icon"><img src="./images/tools.svg"></div>
-            </div>
-            <div class="avt-repair-blocks-photo">
-                <div class="avt-repair-blocks-photo-items">
-                    <img class="avt-repair-blocks-img-item" src="./images/repair1.jpg" alt="Redecorating">
-                    <div class="avt-repair-blocks-text-item">
-                        <h4 class="avt-title avt-title__h4 avt-repair-blocks-text-item__h4">Redecorating</h4>
-                        <ul class="avt-repair-blocks-text-ul">
-                            <li class="avt-repair-blocks-text-li">Dismantling of old coatings</li>
-                            <li class="avt-repair-blocks-text-li">Wallpapering</li>
-                            <li class="avt-repair-blocks-text-li">Painting walls and ceilings</li>
-                            <li class="avt-repair-blocks-text-li">Laying flooring</li>
-                            <li class="avt-repair-blocks-text-li">Replacing plumbing</li>
-                            <li class="avt-repair-blocks-text-li">Replacing sockets and switches</li>
-                            <li class="avt-repair-blocks-text-li">Replacing doors</li>
-                        </ul>
-                        <div class="avt-title avt-repair-blocks-text__button">from 900 rub / m2</div>
-                    </div>
-                </div>
-                <div class="avt-repair-blocks-photo-items">
-                    <img class="avt-repair-blocks-img-item" src="./images/repair2.jpg" alt="Overhaul"">
-                    <div class="avt-repair-blocks-text-item">
-                        <h4 class="avt-title avt-title__h4 avt-repair-blocks-text-item__h4">Overhaul</h4>
-                        <ul class="avt-repair-blocks-text-ul">
-                            <li class="avt-repair-blocks-text-li">Dismantling of old coatings</li>
-                            <li class="avt-repair-blocks-text-li">Wallpapering</li>
-                            <li class="avt-repair-blocks-text-li">Painting walls and ceilings</li>
-                            <li class="avt-repair-blocks-text-li">Laying flooring</li>
-                            <li class="avt-repair-blocks-text-li">Replacing plumbing</li>
-                            <li class="avt-repair-blocks-text-li">Replacing sockets and switches</li>
-                            <li class="avt-repair-blocks-text-li">Replacing doors</li>
-                        </ul>                    
-                        <div class="avt-title avt-repair-blocks-text__button">from 1800 rub / m2</div>
-                    </div>
-                </div>
-                <div class="avt-repair-blocks-photo-items">
-                    <img class="avt-repair-blocks-img-item" src="./images/repair3.jpg" alt="Designer Repair">
-                    <div class="avt-repair-blocks-text-item">
-                        <h4 class="avt-title avt-title__h4 avt-repair-blocks-text-item__h4">Designer Repair</h4>
-                        <ul class="avt-repair-blocks-text-ul">
-                            <li class="avt-repair-blocks-text-li">Dismantling of old coatings</li>
-                            <li class="avt-repair-blocks-text-li">Wallpapering</li>
-                            <li class="avt-repair-blocks-text-li">Painting walls and ceilings</li>
-                            <li class="avt-repair-blocks-text-li">Laying flooring</li>
-                            <li class="avt-repair-blocks-text-li">Replacing plumbing</li>
-                            <li class="avt-repair-blocks-text-li">Replacing sockets and switches</li>
-                            <li class="avt-repair-blocks-text-li">Replacing doors</li>
-                        </ul>                    
-                        <div class="avt-title avt-repair-blocks-text__button">from 4000 rub / m2</div>
-                    </div>
-                    </div>
-            </div>
-        </section>
-
-        <section id="STEPS" class="avt-steps avt-container__topnav">
-            <div class="avt-steps-line1">
-                <div class="avt-steps-white">
-                    <div class="avt-steps-white-item">
-                        <div class="avt-title avt-steps-white-item-circle">01</div>
-                        <div>Our specialist will arrive for measurements per day<br> contact, or appoint a date convenient for you</div>
-                    </div>
-                    <div class="avt-steps-white-item">
-                        <div class="avt-title avt-steps-white-item-circle">02</div>
-                        <div>Free metering</div>
-                    </div>
-                    <div class="avt-steps-white-item">
-                        <div class="avt-title avt-steps-white-item-circle">03</div>
-                        <div>Free consultation</div>
-                    </div>
-                    <div class="avt-steps-white-item">
-                        <div class="avt-title avt-steps-white-item-circle">04</div>
-                        <div>Get a cost estimate and<br> the timing of your future repairs</div>
-                    </div>
-                </div>
-                <div class="avt-steps-black">
-                    <div class="avt-steps-black-title">
-                        Leave a request for free<br>departure of the measurer
-                    </div>
-                    <div class="avt-steps-black-inputblock">
-                        <p class="avt-steps-black-inputblock__caption">Name</p>
-                        <input class="avt-steps-black-inputblock__input" type="text" value="" placeholder="What is your name:">
-                    </div>
-                    <div class="avt-steps-black-inputblock">
-                        <p class="avt-steps-black-inputblock__caption">Phone</p>
-                        <input class="avt-steps-black-inputblock__input" type="tel" value="" placeholder="Your phone number:">
-                    </div>
-                    <div class="avt-steps-black-inputblock">
-                        <p class="avt-steps-black-inputblock__caption">Email</p>
-                        <input class="avt-steps-black-inputblock__input" type="text" value="" placeholder="Your email:">
-                    </div>
-                    <div class="avt-control-form-line2">
-                        <input id="avt-steps-black-checkbox__check" class="avt-control-form-line2__check" type="checkbox" value="yes" checked=true>
-                        <label for="avt-steps-black-checkbox__check" class="avt-control-form-line2__label">I agree to the processing of personal data</label>
-                    </div>
-                    <div class="avt-steps-black-lastline">
-                        <button  class="avt-button avt-button__beige_white avt-steps-black-button">Call the measurer</button>
-                    </div>
-                </div>
-            </div>
-            <div class="avt-steps-line2">
-                <div class="avt-steps-tip">
-                    <div class="avt-steps-tip-circle"></div>
-                    <div class="avt-steps-tip-text"> Help save 10 - 20% of the<br> cost of materials</div>
-                </div>
-            </div>
-        </section>
-        <section id="CLIENTS" class="avt-clients">
-            <div class="avt-container__main">
-                <h3 class="avt-title avt-title__h3 avt-repair__h3">OUR CLIENTS</h3>
-                <div class="avt-repair-iconblock">
-                    <div class="avt-repair-iconblock__icon"><img src="./images/hands.svg"></div>
-                </div>
-                <div class="avt-clients-intro">
-                    80% of our customers recommend us to their<br> friends and family.
-                </div>
-                <div class="avt-clients-blocks">
-                    <div class="avt-clients-blocks-item">
-                        <div class="avt-clients-blocks-item-header">
-                            <img class="avt-clients-blocks-item-header-foto" src="./images/clients_fmk.jpg" alt="Clients. Fedosova Maria Konstantinovna">
-                            <div class="avt-title avt-clients-blocks-item-header-text">Fedosova Maria Konstantinovna</div>
-                        </div>
-                        <div class="avt-clients-blocks-item-text">
-                            <div class="avt-clients-blocks-item-text-p">
-                                I want to thank the guys for their work. We put your shower part in repair.
-                                I am very grateful that I referred to the repair as to my own.
-                                Great thanks I express the project to Georgia for its professionalism and approach.
-                            </div>
-                            <div class="avt-clients-blocks-item-text-p">
-                                The repair process was turned out in terms, faster than anticipated.
-                                Team mobile and professional. Works performed qualitatively without comments.
-                                Quality satisfied. Prices democratic. I recommend these masters.
-                            </div>
-                        </div>
-                        <div class="avt-clients-blocks-item-info">
-                            <div class="avt-clients-blocks-item-info-item">
-                                <img class="avt-clients-blocks-item-info-icon" src="./images/clients_m2.svg">
-                                <div class="avt-title avt-clients-blocks-item-info-text">40 m2</div>
-                            </div>
-                            <div class="avt-clients-blocks-item-info-item">
-                                <img class="avt-clients-blocks-item-info-icon" src="./images/clients_days.svg">
-                                <div class="avt-title avt-clients-blocks-item-info-text">48 days</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="avt-clients-blocks-item">
-                        <div class="avt-clients-blocks-item-header">
-                            <img class="avt-clients-blocks-item-header-foto" src="./images/clients_asa.jpg" alt="Clients. Afanasyev Sergey Alexandrovich">
-                            <div class="avt-title avt-clients-blocks-item-header-text">Afanasyev Sergey Alexandrovich</div>
-                        </div>
-                        <div class="avt-clients-blocks-item-text">
-                            <div class="avt-clients-blocks-item-text-p">
-                                I want to thank the guys for their work. We put your shower part in repair.
-                                I am very grateful that I referred to the repair as to my own.
-                                Great thanks I express the project to Georgia for its professionalism and approach.
-                            </div>
-                            <div class="avt-clients-blocks-item-text-p">
-                                The repair process was turned out in terms, faster than anticipated.
-                                Team mobile and professional. Works performed qualitatively without comments.
-                                Quality satisfied. Prices democratic. I recommend these masters.
-                            </div>
-                        </div>
-                        <div class="avt-clients-blocks-item-info">
-                            <div class="avt-clients-blocks-item-info-item">
-                                <img class="avt-clients-blocks-item-info-icon" src="./images/clients_m2.svg">
-                                <div class="avt-title avt-clients-blocks-item-info-text">90 m2</div>
-                            </div>
-                            <div class="avt-clients-blocks-item-info-item">
-                                <img class="avt-clients-blocks-item-info-icon" src="./images/clients_days.svg">
-                                <div class="avt-title avt-clients-blocks-item-info-text">128 days</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="avt-clients-blocks-item">
-                        <div class="avt-clients-blocks-item-header">
-                            <img class="avt-clients-blocks-item-header-foto" src="./images/clients_kel.jpg" alt="Clients. Kiriev Egor Leonidovich">
-                            <div class="avt-title avt-clients-blocks-item-header-text">Kiriev Egor Leonidovich</div>
-                        </div>
-                        <div class="avt-clients-blocks-item-text">
-                            <div class="avt-clients-blocks-item-text-p">
-                                I want to thank the guys for their work. We put your shower part in repair.
-                                I am very grateful that I referred to the repair as to my own.
-                                Great thanks I express the project to Georgia for its professionalism and approach.
-                            </div>
-                            <div class="avt-clients-blocks-item-text-p">
-                                The repair process was turned out in terms, faster than anticipated.
-                                Team mobile and professional. Works performed qualitatively without comments.
-                                Quality satisfied. Prices democratic. I recommend these masters.
-                            </div>
-                            <div class="avt-clients-blocks-item-info">
-                                <div class="avt-clients-blocks-item-info-item">
-                                    <img class="avt-clients-blocks-item-info-icon" src="./images/clients_m2.svg">
-                                    <div class="avt-title avt-clients-blocks-item-info-text">56 m2</div>
-                                </div>
-                                <div class="avt-clients-blocks-item-info-item">
-                                    <img class="avt-clients-blocks-item-info-icon" src="./images/clients_days.svg">
-                                    <div class="avt-title avt-clients-blocks-item-info-text">86 days</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="avt-imagecity">
-            <img src="./images/city.png" class="avt-imagecity-item">
-            <img src="./images/city.png" class="avt-imagecity-item">
-        </section>
-        <section class="avt-questions">
-            <div class="avt-container__main">
-                <div class="avt-steps-black">
-                    <div class="avt-title avt-title__h3 avt-steps-black-title">
-                        have any questions?
-                    </div>
-                    <div class="avt-control-form-line1">
-                        <div class="avt-steps-black-inputblock">
-                            <p class="avt-steps-black-inputblock__caption">Name</p>
-                            <input class="avt-steps-black-inputblock__input" type="text" value="" placeholder="What is your name:">
-                        </div>
-                        <div class="avt-steps-black-inputblock">
-                            <p class="avt-steps-black-inputblock__caption">Phone</p>
-                            <input class="avt-steps-black-inputblock__input" type="tel" value="" placeholder="Your phone number:">
-                        </div>
-                    </div>
-                    <div class="avt-steps-black-inputblock">
-                        <p class="avt-steps-black-inputblock__caption">Question</p>
-                        <input class="avt-steps-black-inputblock__input" type="text" value="" placeholder="I want to know:">
-                    </div>
-                    <div class="avt-control-form-line2">
-                        <input id="avt-steps-black-checkbox__check" class="avt-control-form-line2__check" type="checkbox" value="yes" checked=true>
-                        <label for="avt-steps-black-checkbox__check" class="avt-control-form-line2__label">I agree to the processing of personal data</label>
-                    </div>
-                    <div class="avt-steps-black-lastline">
-                        <button  class="avt-button avt-button__beige_white avt-steps-black-button">Submit</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="avt-address">
-            <div class="avt-container__main">
-                <div class="avt-address-inner">
-                    <div class="avt-address-container">
-                        <div class="avt-title avt-title__h3 avt-address-container-text">
-                            Rostov-on-Don, Nansen St., 239 Shopping Center<span class="avt-visible-desctop_line"><br></span>Decorum<span class="avt-visible-mobile_line"><br></span> Tel +7 (928) 768 32 29
-                        </div>
-                        <div class="avt-address-container-icon">
-                            <div class="avt-address-container-icon-item avt-address-container-icon-item--mail"></div>
-                            <div class="avt-address-container-icon-item avt-address-container-icon-item--insta"></div>
-                        </div>
-                        <div class="avt-address-container-map">
-                            <div class="avt-address-container-map-img"></div>
-                            <!--img src="./images/jpg_map.jpg" alt=""-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <nav class="avt-header avt-footer">
-        <div class="avt-container__topnav   avt-container__header">
-            
-            <a href="" class="avt-header__logo">IC "Repair Design Project"</a>
-            
-            <ul class="avt-header-navigation">
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#HOME">HOME</a></li>
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#PROJECTS">PROJECTS</a></li>
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#MEASUREMENT">MEASUREMENT</a></li>
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#TEAM">TEAM</a></li>
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#REVIEWS">REVIEWS</a></li>
-                <li class="avt-header-navigation__list"><a class="avt-header-navigation__link" href="#CONTACTS">CONTACTS</a></li>
-            </ul>
-            
-            <a href="tel:+79287683239" class="avt-header__tel">+7 (928) 768-32-39</a>
-            
-            <button  class="avt-button avt-button__beige avt-header__button">Request a call</button>
         </div>
-    </nav>
+    </section>
+
+    <!--script src="./scripts/projects.js"></script-->
+    <script type="module" src="./scripts/slider.js"></script>
 </body>
 </html>
